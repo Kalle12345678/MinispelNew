@@ -507,37 +507,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66e2830935769204eafedc1cabda8a5e, type: 3}
---- !u!1 &399378826
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 399378827}
-  m_Layer: 0
-  m_Name: GroundCheck
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &399378827
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 399378826}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.02, y: -0.987, z: 0.042761013}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1126935705}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &423688048
 GameObject:
   m_ObjectHideFlags: 0
@@ -830,7 +799,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e61bd6c5b7c5904a991dfc7cfc35bd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 399378827}
+  player: {fileID: 1126935705}
   smoothSpeed: 0.125
   offset: {x: 5, y: 0, z: 0}
 --- !u!4 &757894947 stripped
@@ -1180,7 +1149,7 @@ Transform:
   m_GameObject: {fileID: 902277665}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.72, y: 0.68297416, z: 0.10922307}
+  m_LocalPosition: {x: 5.72, y: 0.608, z: 0.10922307}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1268,11 +1237,10 @@ Transform:
   m_GameObject: {fileID: 1126935703}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -13.53, y: -3.75, z: -0.10922307}
+  m_LocalPosition: {x: -14.83, y: -3.7, z: -0.10922307}
   m_LocalScale: {x: 0.8409, y: 0.8409, z: 0.8409}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 399378827}
   - {fileID: 1710042943}
   m_Father: {fileID: 902277666}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1288,17 +1256,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de85611623af4ba4ba9ebfee8c822ad9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boxSize: {x: 0, y: 0}
-  castDistacnce: 0
-  speed: 4
-  jumpForce: 7
-  isGravityInverted: 0
-  direction: {x: 1, y: 0}
-  rb: {fileID: 1126935707}
-  groundCheck: {fileID: 399378827}
+  boxSize: {x: 0.85, y: 0.1}
+  castDistance: 1
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
+  speed: 4
+  jumpForce: 7
+  rb: {fileID: 1126935707}
 --- !u!50 &1126935707
 Rigidbody2D:
   serializedVersion: 4
@@ -1652,7 +1617,7 @@ Transform:
   m_GameObject: {fileID: 1710042942}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.3762, y: 0.4245, z: 0}
+  m_LocalPosition: {x: 0.3762, y: 0.4245, z: -0.57}
   m_LocalScale: {x: 0.7687404, y: 0.21707058, z: 1.189202}
   m_ConstrainProportionsScale: 0
   m_Children: []

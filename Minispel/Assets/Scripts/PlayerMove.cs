@@ -1,73 +1,78 @@
+using Unity.Burst.CompilerServices;
 using UnityEngine;
-
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
 public class PlayerMove : MonoBehaviour
 {
     public Vector2 boxSize;
-    public float castDistacnce;
+    public float castDistance;
+    public LayerMask groundLayer;
 
     private float horizontal;
-    public float speed = 8f;
-    public float jumpForce = 16;
-    public bool isGravityInverted = false;
+    public float speed = 4;
+    public float jumpForce = 7;
+    private bool isGravityInverted = false;
+
     public Vector2 direction = Vector2.right;
 
     [SerializeField] private Rigidbody2D rb;
-    [SerializeField] private Transform groundCheck;
-    [SerializeField] private LayerMask groundLayer;
 
+    //Kollar om spelaren hoppar och från vilken yta
     private void Update()
     {
         horizontal = Input.GetAxisRaw("Horizontal");
 
-        if (Input.GetButtonDown("Jump") && IsGrounded())
+        if (Input.GetButtonDown("Jump") && IsGrounded() && isGravityInverted == false)
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
         }
-
-        if (Input.GetKeyDown(KeyCode.E) && isGravityInverted == false)
+        else if (Input.GetButtonDown("Jump") && IsGrounded() && isGravityInverted == true)
         {
-            rb.gravityScale = -1;
-            isGravityInverted = true;
-            transform.rotation = Quaternion.AxisAngle(new Vector3(1, 0, 0), 3.14f);
-        }
-        else if (Input.GetKeyDown(KeyCode.E) && isGravityInverted == true)
-        {
-            rb.gravityScale = 1;
-            isGravityInverted = false;
-            transform.rotation = Quaternion.AxisAngle(new Vector3(1, 0, 0), 0f);
+            rb.velocity = new Vector2(rb.velocity.x, jumpForce * -1);
         }
 
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            ToggleGravity();
+        }
     }
     void FixedUpdate()
     {
-        // transform.Translate(direction * speed * Time.deltaTime);
+        transform.Translate(direction * speed * Time.deltaTime);
         rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
     }
 
-    //Skapar en osynlig cirkel under spelaren som skickar tillbaka en bool när den nuddar ground lagret
-    /* private bool IsGrounded()
-     {
-         return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
-     }
-    */
-
-    public bool IsGrounded()
+    //Växlar mellan normal och inverterad gravitation
+    private void ToggleGravity()
     {
-        if (Physics2D.BoxCast(transform.position, boxSize, 0, -transform.up, castDistacnce, groundLayer))
+        if (isGravityInverted)
         {
-            return true;
+            rb.gravityScale = 1;
+            isGravityInverted = false;
+            transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
         }
         else
         {
-            return false;
+            rb.gravityScale = -1;
+            isGravityInverted = true;
+            transform.rotation = Quaternion.Euler(new Vector3(180, 0, 0));
         }
     }
-    private void OnDrawGizmos()
+
+    //Tittar om spelaren är på marken
+    public bool IsGrounded()
     {
-        Gizmos.DrawWireCube(transform.position - transform.up * castDistacnce, boxSize);
+        Vector2 castDirection;
+        if (isGravityInverted == true)
+        {
+             castDirection = Vector2.up;
+        }
+        else
+        {
+            castDirection = Vector2.down;
+        }
+
+        //Gör en BoxCast för att veta om spelaren är  på marken eller i taket
+        RaycastHit2D hit = Physics2D.BoxCast(transform.position, boxSize, 0, castDirection, castDistance, groundLayer);
+
+        return hit.collider != null;
     }
 }
