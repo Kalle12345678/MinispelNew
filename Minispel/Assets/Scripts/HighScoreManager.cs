@@ -4,19 +4,18 @@ using UnityEngine;
 
 public class HighScoreManager : MonoBehaviour
 {
-    private const string HighScoreKey = "HighScore";
-
     public void SaveHighScore(int score)
     {
-        int highScore = PlayerPrefs.GetInt(HighScoreKey, 0);
-        if(score > highScore)
+        int highScore = PlayerPrefs.GetInt("HighScore", 0);
+        if (score > highScore)
         {
-            PlayerPrefs.SetInt(HighScoreKey, score);
+            PlayerPrefs.SetInt("HighScore", score);
         }
     }
 
     public int GetHighScore()
     {
-        return PlayerPrefs.GetInt(HighScoreKey, 0);
+        return PlayerPrefs.GetInt("HighScore", 0);
     }
+    
 }

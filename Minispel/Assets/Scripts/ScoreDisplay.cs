@@ -1,10 +1,10 @@
 using UnityEngine;
-using UnityEngine.UI;
+using TMPro;
 
 public class ScoreDisplay : MonoBehaviour
 {
-    public Text currentScoreText;
-    public Text highScoreText;
+    public TextMeshProUGUI currentScoreText;
+    public TextMeshProUGUI highScoreText;
     public ScoreManager scoreManager;
     public HighScoreManager highScoreManager;
 
