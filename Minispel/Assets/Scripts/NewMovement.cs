@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
-public class NewMovement : MonoBehaviour, IScore
+public class NewMovement : MonoBehaviour
 {
     public Vector2 boxSize;
     public float castDistance;
@@ -13,8 +13,6 @@ public class NewMovement : MonoBehaviour, IScore
     public float speed = 4;
     public float jumpForce = 7;
     private bool isGravityInverted = false;
-
-    private int playerScore = 0;
 
     public Vector2 direction = Vector2.right;
 
@@ -97,12 +95,6 @@ public class NewMovement : MonoBehaviour, IScore
     private void FixedUpdate()
     {
         Move(horizontal);
-    }
-
-    public void AddScore(int points)
-    {
-        playerScore += points;
-        Debug.Log("Player Score: " + playerScore);
     }
 
     public interface IMovement

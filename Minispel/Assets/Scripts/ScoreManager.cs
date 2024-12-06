@@ -1,24 +1,12 @@
-using TMPro;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class ScoreManager : MonoBehaviour, IScore
+public class ScoreManager : MonoBehaviour
 {
-    private int score = 0;
-
-    [SerializeField] private TextMeshProUGUI scoreText;
-    public void AddScore(int points)
+    public int currentScore = 0;
+    public void AddScore(int score)
     {
-        score += points;
-        Debug.Log("Score: " + score);
-    }
-
-    private void Start()
-    {
-        UpdateScoreText();
-    }
-
-    private void UpdateScoreText()
-    {
-        scoreText.text = "Score: " + score;
+        
     }
 }
