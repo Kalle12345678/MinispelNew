@@ -7,12 +7,12 @@ public class GameManager : MonoBehaviour
     public ScoreManager scoreManager;
     public HighScoreManager highScoreManager;
 
-    private void EndGame()
+    public void EndGame()
     {
         int finalScore = scoreManager.currentScore;
-        highScoreManager.SaveHighScore(finalScore);
+        highScoreManager.GetHighScore();
 
-        Debug.Log("Game Over! Final Score: " + finalScore);
-        Debug.Log("High Score: " + highScoreManager.GetHighScore());
+        print("Game Over! Final Score: " + finalScore);
+        print("High Score: " + highScoreManager.GetHighScore());
     }
 }
