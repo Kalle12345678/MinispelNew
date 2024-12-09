@@ -12,7 +12,7 @@ public class Coin : MonoBehaviour
         {
             ScoreManager scoreManager = FindAnyObjectByType<ScoreManager>();
             scoreManager.AddScore(scoreValue);
-            //Destroy(gameObject);
+            Destroy(gameObject);
         }
     }
 }

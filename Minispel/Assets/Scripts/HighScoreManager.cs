@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class HighScoreManager : MonoBehaviour
 {
+    ScoreManager scoreManager;
     public void SaveHighScore(int score)
     {
-        int highScore = PlayerPrefs.GetInt("HighScore", 0);
-        if (score > highScore)
+        int highScore = PlayerPrefs.GetInt("HighScore");
+        if (scoreManager.score > highScore)
         {
             PlayerPrefs.SetInt("HighScore", score);
         }
@@ -15,7 +16,7 @@ public class HighScoreManager : MonoBehaviour
 
     public int GetHighScore()
     {
-        return PlayerPrefs.GetInt("HighScore", 0);
+        return PlayerPrefs.GetInt("HighScore");
     }
     
 }

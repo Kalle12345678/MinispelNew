@@ -11,8 +11,8 @@ public class DeathScore : MonoBehaviour
 
     private void Start()
     {
-        int currentScore = PlayerPrefs.GetInt("PlayerScore", 1);
-        int highScore = PlayerPrefs.GetInt("HighScoreKey", 2);
+        int currentScore = PlayerPrefs.GetInt("PlayerScore");
+        int highScore = PlayerPrefs.GetInt("HighScoreKey");
 
         currentScoreText.text = "Score: " + currentScore;
         highScoreText.text = "HighScore: " + highScoreManager.GetHighScore();
