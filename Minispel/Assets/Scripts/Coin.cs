@@ -14,7 +14,7 @@ public class Coin : MonoBehaviour
             if (scoreManager != null)
             {
                 scoreManager.AddScore(scoreValue);
-                scoreManager.SaveScore(); // Save each time a coin is collected
+                scoreManager.SaveScore();
                 Destroy(gameObject);
             }
         }

@@ -11,7 +11,7 @@ public class NewMovement : MonoBehaviour
 
     private float horizontal;
     public float speed = 4;
-    public float jumpForce = 7;
+    public float jumpForce = 15;
     private bool isGravityInverted = false;
 
     public Vector2 direction = Vector2.right;
@@ -36,10 +36,10 @@ public class NewMovement : MonoBehaviour
     //Flyttar spelaren konstant
     public void Move(float horizontalInput)
     {
-        /*
+        
         transform.Translate(direction * speed * Time.deltaTime);
         rb.velocity = new Vector2(horizontalInput * speed, rb.velocity.y);
-        */
+        
     }
 
     //Växlar mellan normal och inverterad gravitation
@@ -47,13 +47,13 @@ public class NewMovement : MonoBehaviour
     {
         if (isGravityInverted)
         {
-            rb.gravityScale = 1;
+            rb.gravityScale = 1.5f;
             isGravityInverted = false;
             transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
         }
         else
         {
-            rb.gravityScale = -1;
+            rb.gravityScale = -1.5f;
             isGravityInverted = true;
             transform.rotation = Quaternion.Euler(new Vector3(180, 0, 0));
         }

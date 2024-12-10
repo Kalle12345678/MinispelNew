@@ -13,14 +13,13 @@ public class DeathScore : MonoBehaviour
 
     private void Start()
     {
-        gameManager.EndGame();
+        highScoreManager.GetHighScore();
 
-        /*
         int currentScore = PlayerPrefs.GetInt("PlayerScore");
         int highScore = PlayerPrefs.GetInt("HighScoreKey");
 
         currentScoreText.text = "Score: " + currentScore;
         highScoreText.text = "HighScore: " + highScoreManager.GetHighScore();
-        */
+        
     }
 }
