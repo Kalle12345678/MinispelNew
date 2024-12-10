@@ -36,10 +36,8 @@ public class NewMovement : MonoBehaviour
     //Flyttar spelaren konstant
     public void Move(float horizontalInput)
     {
-        
         transform.Translate(direction * speed * Time.deltaTime);
         rb.velocity = new Vector2(horizontalInput * speed, rb.velocity.y);
-        
     }
 
     //Växlar mellan normal och inverterad gravitation
@@ -58,7 +56,6 @@ public class NewMovement : MonoBehaviour
             transform.rotation = Quaternion.Euler(new Vector3(180, 0, 0));
         }
     }
-
 
     public bool IsGrounded()
     {
@@ -79,7 +76,7 @@ public class NewMovement : MonoBehaviour
         return hit.collider != null;
     }
 
-    //Gör så att manh kan hoppa om man står på marken eller i taket
+    //Gör så att man kan hoppa om man står på marken eller i taket
     private void Jump()
     {
         if (isGravityInverted)
@@ -92,7 +89,7 @@ public class NewMovement : MonoBehaviour
         }
     }
 
-    private void FixedUpdate()
+    void FixedUpdate()
     {
         Move(horizontal);
     }
@@ -111,11 +108,4 @@ public class NewMovement : MonoBehaviour
     {
         bool IsGrounded();
     }
-
-    /*
-    private void OnDrawGizmos()
-    {
-        Gizmos.DrawWireCube(transform.position - transform.up * castDistance, boxSize);
-    }
-    */
 }

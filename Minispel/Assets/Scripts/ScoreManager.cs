@@ -4,23 +4,20 @@ using UnityEngine;
 
 public class ScoreManager : MonoBehaviour
 {
-    public ScoreManager scoreManager;
     public int currentScore;
 
+    //Lägger till score till nuvarande poäng
     public void AddScore(int score)
     {
         currentScore += score;
     }
 
+    //Sparar score och updaterar highscore 
     public void SaveScore()
     {
         PlayerPrefs.SetInt("PlayerScore", currentScore);
         HighScoreManager highScoreManager = FindObjectOfType<HighScoreManager>();
-        if (highScoreManager != null)
-        {
-            highScoreManager.SaveHighScore(currentScore);
-        }
+        highScoreManager.SaveHighScore(currentScore);
         PlayerPrefs.Save();
     }
-
 }

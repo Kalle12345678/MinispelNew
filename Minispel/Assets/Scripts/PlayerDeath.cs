@@ -6,8 +6,9 @@ using UnityEngine.SceneManagement;
 public class PlayerDeath : MonoBehaviour
 {
     public ScoreManager scoreManager;
-    private void OnTriggerEnter2D(Collider2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
+        //Om du nuddar en spik, spara ditt score, döda spelaren, byt scen
         if (collision.CompareTag("Spike"))
         {
             scoreManager.SaveScore();

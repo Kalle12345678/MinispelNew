@@ -6,17 +6,17 @@ public class Coin : MonoBehaviour
 {
     private int scoreValue = 100;
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    //Om "coin" nuddar spelaren lägg till poäng och spara, sedan ta bort "coin"
+    void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
             ScoreManager scoreManager = GameObject.FindObjectOfType<ScoreManager>();
-            if (scoreManager != null)
-            {
-                scoreManager.AddScore(scoreValue);
-                scoreManager.SaveScore();
-                Destroy(gameObject);
-            }
+
+            scoreManager.AddScore(scoreValue);
+            scoreManager.SaveScore();
+
+            Destroy(gameObject);
         }
     }
 }
