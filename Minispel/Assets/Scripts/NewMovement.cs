@@ -10,7 +10,7 @@ public class NewMovement : MonoBehaviour
     public LayerMask groundLayer;
 
     private float horizontal;
-    public float speed = 4;
+    public float speed = 6;
     public float jumpForce = 15;
     private bool isGravityInverted = false;
 
@@ -22,7 +22,7 @@ public class NewMovement : MonoBehaviour
     {
         horizontal = Input.GetAxisRaw("Horizontal");
 
-        if (Input.GetButtonDown("Jump") && IsGrounded())
+        if (Input.GetButton("Jump") && IsGrounded())
         {
             Jump();
         }
@@ -43,13 +43,13 @@ public class NewMovement : MonoBehaviour
     //Växlar mellan normal och inverterad gravitation
     public void ToggleGravity()
     {
-        if (isGravityInverted)
+        if (isGravityInverted == true && IsGrounded())
         {
             rb.gravityScale = 1.5f;
             isGravityInverted = false;
             transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
         }
-        else
+        else if (isGravityInverted == false && IsGrounded())
         {
             rb.gravityScale = -1.5f;
             isGravityInverted = true;

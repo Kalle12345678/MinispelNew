@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class HighScoreManager : MonoBehaviour
 {
-    ScoreManager scoreManager;
-    private int score;
     public void SaveHighScore(int score)
     {
         int highScore = PlayerPrefs.GetInt("HighScore");
+
         //Om nuvarande score är högre än tidigare, spara nuvarande som highscore
         if (score > highScore)
         {

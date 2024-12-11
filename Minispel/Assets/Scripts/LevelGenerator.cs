@@ -5,8 +5,8 @@ public class EndlessObstacleGenerator : MonoBehaviour
 {
     public GameObject[] tilePrefabs;
     public Transform player;
-    private float tileLength = 17f;
-    private float spawnDistance = 15f;
+    public float tileLength = 17f;
+    public float spawnDistance = 15f;
     private float lastSpawnX;
     private Queue<GameObject> activeTiles;
 
@@ -14,7 +14,7 @@ public class EndlessObstacleGenerator : MonoBehaviour
     {
         lastSpawnX = player.position.x;
         activeTiles = new Queue<GameObject>();
-        SpawnInitialTiles();
+        // SpawnInitialTiles();
     }
 
     public void Update()
@@ -39,7 +39,7 @@ public class EndlessObstacleGenerator : MonoBehaviour
         GameObject tile = tilePrefabs[Random.Range(0, tilePrefabs.Length)];
 
         //Beräknar spawn positionen för nya tilen
-        Vector3 spawnPosition = new(lastSpawnX + tileLength, 0, 0);
+        Vector2 spawnPosition = new(lastSpawnX + tileLength, 0);
         GameObject newTile = Instantiate(tile, spawnPosition, Quaternion.identity);
 
         newTile.tag = "Tile";
@@ -47,7 +47,7 @@ public class EndlessObstacleGenerator : MonoBehaviour
 
         lastSpawnX = spawnPosition.x;
     }
-
+    /*
     void SpawnInitialTiles()
     {
         for (int i = 0; i < 5; i++)
@@ -55,7 +55,7 @@ public class EndlessObstacleGenerator : MonoBehaviour
             SpawnTile();
         }
     }
-
+    */
     //Tar bort tiles som är bakom spelaren
     void DestroyOldTiles()
     {

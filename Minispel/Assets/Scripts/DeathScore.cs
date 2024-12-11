@@ -5,15 +5,12 @@ using UnityEngine;
 
 public class DeathScore : MonoBehaviour
 {
-    public GameManager gameManager;
-    public TextMeshProUGUI highScoreText;
-    public TextMeshProUGUI currentScoreText;
     public HighScoreManager highScoreManager;
+    public TextMeshProUGUI currentScoreText;
+    public TextMeshProUGUI highScoreText;
 
-    void Start()
+    public void Start()
     {
-        highScoreManager.GetHighScore();
-
         //Tar fram score från "playerPrefs"
         int currentScore = PlayerPrefs.GetInt("PlayerScore");
         int highScore = PlayerPrefs.GetInt("HighScoreKey");
