@@ -12,7 +12,7 @@ public class PlayerDeath : MonoBehaviour
         if (collision.CompareTag("Spike"))
         {
             scoreManager.SaveScore();
-            Destroy(gameObject);
+            gameObject.SetActive(false);
             SceneManager.LoadScene("DeathScreen");
         }
     }

@@ -14,7 +14,7 @@ public class EndlessObstacleGenerator : MonoBehaviour
     {
         lastSpawnX = player.position.x;
         activeTiles = new Queue<GameObject>();
-        // SpawnInitialTiles();
+        SpawnInitialTiles();
     }
 
     public void Update()
@@ -47,7 +47,7 @@ public class EndlessObstacleGenerator : MonoBehaviour
 
         lastSpawnX = spawnPosition.x;
     }
-    /*
+    
     void SpawnInitialTiles()
     {
         for (int i = 0; i < 5; i++)
@@ -55,7 +55,7 @@ public class EndlessObstacleGenerator : MonoBehaviour
             SpawnTile();
         }
     }
-    */
+    
     //Tar bort tiles som är bakom spelaren
     void DestroyOldTiles()
     {

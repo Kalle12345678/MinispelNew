@@ -536,7 +536,7 @@ GameObject:
   - component: {fileID: 7778356296492824876}
   m_Layer: 0
   m_Name: Spike (22)
-  m_TagString: Tile
+  m_TagString: Spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -802,7 +802,7 @@ GameObject:
   - component: {fileID: 4176189862960581862}
   m_Layer: 0
   m_Name: Spike (11)
-  m_TagString: Tile
+  m_TagString: Spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -935,7 +935,7 @@ GameObject:
   - component: {fileID: 291852083958117993}
   m_Layer: 0
   m_Name: Spike (27)
-  m_TagString: Tile
+  m_TagString: Spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1068,7 +1068,7 @@ GameObject:
   - component: {fileID: 2871882450586257609}
   m_Layer: 0
   m_Name: Spike (21)
-  m_TagString: Tile
+  m_TagString: Spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1464,7 +1464,7 @@ GameObject:
   - component: {fileID: 36483537063317105}
   m_Layer: 0
   m_Name: Spike (14)
-  m_TagString: Tile
+  m_TagString: Spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1597,7 +1597,7 @@ GameObject:
   - component: {fileID: 65551131742323127}
   m_Layer: 0
   m_Name: Spike (18)
-  m_TagString: Tile
+  m_TagString: Spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1794,7 +1794,7 @@ GameObject:
   - component: {fileID: 5030038578121216647}
   m_Layer: 0
   m_Name: Spike (23)
-  m_TagString: Tile
+  m_TagString: Spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2060,7 +2060,7 @@ GameObject:
   - component: {fileID: 1524298100707166647}
   m_Layer: 0
   m_Name: Spike (12)
-  m_TagString: Tile
+  m_TagString: Spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2193,7 +2193,7 @@ GameObject:
   - component: {fileID: 1774874495957508858}
   m_Layer: 0
   m_Name: Spike (16)
-  m_TagString: Tile
+  m_TagString: Spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2326,7 +2326,7 @@ GameObject:
   - component: {fileID: 4811404173411376277}
   m_Layer: 0
   m_Name: Spike (25)
-  m_TagString: Tile
+  m_TagString: Spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2459,7 +2459,7 @@ GameObject:
   - component: {fileID: 6932963390137879563}
   m_Layer: 0
   m_Name: Spike (15)
-  m_TagString: Tile
+  m_TagString: Spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2592,7 +2592,7 @@ GameObject:
   - component: {fileID: 2313088268979729985}
   m_Layer: 0
   m_Name: Spike (26)
-  m_TagString: Tile
+  m_TagString: Spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2725,7 +2725,7 @@ GameObject:
   - component: {fileID: 8419408364393896714}
   m_Layer: 0
   m_Name: Spike (20)
-  m_TagString: Tile
+  m_TagString: Spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2858,7 +2858,7 @@ GameObject:
   - component: {fileID: 3167693255757908796}
   m_Layer: 0
   m_Name: Spike (29)
-  m_TagString: Tile
+  m_TagString: Spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2991,7 +2991,7 @@ GameObject:
   - component: {fileID: 691526612524884033}
   m_Layer: 0
   m_Name: Spike (24)
-  m_TagString: Tile
+  m_TagString: Spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3124,7 +3124,7 @@ GameObject:
   - component: {fileID: 5021878965752357757}
   m_Layer: 0
   m_Name: Spike (13)
-  m_TagString: Tile
+  m_TagString: Spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3387,7 +3387,7 @@ GameObject:
   - component: {fileID: 2628711577062163468}
   m_Layer: 0
   m_Name: Spike (30)
-  m_TagString: Tile
+  m_TagString: Spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3650,7 +3650,7 @@ GameObject:
   - component: {fileID: 5608367014864539045}
   m_Layer: 0
   m_Name: Spike (17)
-  m_TagString: Tile
+  m_TagString: Spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3783,7 +3783,7 @@ GameObject:
   - component: {fileID: 3431036421530959991}
   m_Layer: 0
   m_Name: Spike (28)
-  m_TagString: Tile
+  m_TagString: Spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4176,7 +4176,7 @@ GameObject:
   - component: {fileID: 6216920646194495847}
   m_Layer: 0
   m_Name: Spike (19)
-  m_TagString: Tile
+  m_TagString: Spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

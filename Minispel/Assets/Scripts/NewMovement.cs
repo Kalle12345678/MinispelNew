@@ -17,7 +17,10 @@ public class NewMovement : MonoBehaviour
     public Vector2 direction = Vector2.right;
 
     [SerializeField] private Rigidbody2D rb;
-
+    private void Start()
+    {
+        gameObject.SetActive(true);
+    }
     private void Update()
     {
         horizontal = Input.GetAxisRaw("Horizontal");
