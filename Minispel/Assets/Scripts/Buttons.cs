@@ -16,7 +16,6 @@ public class Buttons : MonoBehaviour
     public void ResetHighscore()
     {
         PlayerPrefs.SetInt("HighScore", 0);
-        print("highscore byte");
         deathScore.Start();
     }
 }
