@@ -8,18 +8,20 @@ public class Buttons : MonoBehaviour
 {
     public DeathScore deathScore;
 
+    //Laddar mainscenen på knapptryck
     public void Restart()
     {
         SceneManager.LoadScene("MainScene");
     }
 
-
+    //Resettar highscore på knapptryck
     public void ResetHighscore()
     {
         PlayerPrefs.SetInt("HighScore", 0);
         deathScore.Start();
     }
 
+    //Stänger ner spelet på knapptryck
     public void OnQuit()
     {
         Application.Quit();
